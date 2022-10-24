@@ -36,7 +36,7 @@ function Login() {
                 <Button type="submit" text="Entrar!" onClick={handleSubmit} />
                 <div>
                     <p>Não possui conta?</p>
-                    <a>Registrar</a>
+                    <a href="http://localhost:3000">Registrar</a>
                 </div>
             </Form>
         </Container>
