@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import { Container, Form } from './styles';
 
 function Login() {
+    const [loading, setLoading] = useState();
+
     const handleChange = (event) => {
         console.log(event.target.value);
     };
@@ -11,7 +13,9 @@ function Login() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
+            setLoading(true);
             alert('Login');
+            setLoading(false);
         } catch (err) {
             alert('erro: ' + err);
         }
