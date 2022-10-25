@@ -1,3 +1,4 @@
+import Navbar from './Components/Navbar';
 import AppRoutes from './Routes/AppRoutes';
 import GlobalStyle from './Styles/global';
 
