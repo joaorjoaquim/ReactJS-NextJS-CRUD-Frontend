@@ -1,8 +1,8 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import ErrorPage from './pages/ErrorPage';
+import Login from '../Pages/Login';
+import Home from '../Pages/Home';
+import ErrorPage from '../Pages/ErrorPage';
 
 export default function AppRoutes() {
     const router = createBrowserRouter([

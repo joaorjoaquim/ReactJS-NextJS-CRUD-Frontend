@@ -1,5 +1,5 @@
-import AppRoutes from './AppRoutes';
-import GlobalStyle from './styles/global';
+import AppRoutes from './Routes/AppRoutes';
+import GlobalStyle from './Styles/global';
 
 function App() {
     return (
