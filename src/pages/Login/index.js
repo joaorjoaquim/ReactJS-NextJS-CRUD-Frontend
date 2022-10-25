@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+import Button from '../../Components/Button';
+import Input from '../../Components/Input';
 import { Container, Form } from './styles';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
-    const [loading, setLoading] = useState();
+    //const [loading, setLoading] = useState();
+    const [form, setForm] = useState([]);
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
-        console.log(event.target.value);
+        setForm({ ...form, [event.target.name]: event.target.value });
+        console.log('Form', form);
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            setLoading(true);
-            alert('Login');
-            setLoading(false);
+            navigate('../home', { replace: true });
         } catch (err) {
             alert('erro: ' + err);
         }
@@ -40,7 +42,7 @@ function Login() {
                 <Button type="submit" text="Entrar!" onClick={handleSubmit} />
                 <div>
                     <p>Não possui conta?</p>
-                    <a href="http://localhost:3000">Registrar</a>
+                    <Link to="/">Registrar</Link>
                 </div>
             </Form>
         </Container>

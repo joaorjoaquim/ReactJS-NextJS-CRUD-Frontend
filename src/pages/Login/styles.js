@@ -13,7 +13,7 @@ export const Content = styled.div`
     max-width: 400px;
     margin: 30px;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
     padding: 20px;
 `;
 
@@ -23,8 +23,8 @@ export const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #383290;
-    border-radius: 5px;
+    background-color: #3c369c;
+    border-radius: 8px;
     width: 100%;
     max-width: 450px;
     gap: 30px 0px;
