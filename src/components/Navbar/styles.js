@@ -6,7 +6,10 @@ export const MyNav = styled.nav`
     background-color: #3c369c;
     padding: 0.5em;
     border-radius: 10px;
-    width: 95%;
+    width: 100%;
+    max-width: 95vw;
+    height: 100%;
+    max-height: 10vh;
     margin: 10px auto;
 `;
 
