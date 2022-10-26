@@ -17,17 +17,17 @@ function Navbar() {
                         </NavLink>
                     </Li>
                     <Li>
-                        <NavLink to="/usuarios" activeStyle>
+                        <NavLink to="/users" activeStyle>
                             Usuários
                         </NavLink>
                     </Li>
                     <Li>
-                        <NavLink to="/projetos" activeStyle>
+                        <NavLink to="/projects" activeStyle>
                             Projetos
                         </NavLink>
                     </Li>
                     <Li>
-                        <NavLink to="/tarefas" activeStyle>
+                        <NavLink to="/tasks" activeStyle>
                             Tarefas
                         </NavLink>
                     </Li>

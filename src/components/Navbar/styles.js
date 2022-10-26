@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const MyNav = styled.nav`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #3c369c;
     padding: 0.5em;
     border-radius: 10px;
@@ -11,6 +12,7 @@ export const MyNav = styled.nav`
     height: 100%;
     max-height: 10vh;
     margin: 10px auto;
+    transition: all 1.3s ease-in;
 `;
 
 export const Container = styled.div`
@@ -25,18 +27,19 @@ export const Container = styled.div`
 `;
 
 export const Img = styled.img`
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
+    margin-left: 10px;
 `;
 
 export const Ul = styled.ul`
     display: flex;
     list-style: none;
-    align-items: center;
+    align-items: flex-end;
 `;
 
 export const Li = styled.li`
-    margin-right: 1em;
+    margin-right: 2em;
 
     a {
         color: #fff;
@@ -44,9 +47,15 @@ export const Li = styled.li`
 
         &:hover {
             color: red;
+            background-color: rgba(129, 129, 215, 1);
+            border-radius: 5px;
+            padding: 5px;
+            transition: all 0.3s ease;
         }
         &.active {
-            color: green;
+            background-color: rgba(129, 129, 215, 1);
+            border-radius: 5px;
+            padding: 5px;
         }
     }
 `;
