@@ -8,11 +8,11 @@ export const MyNav = styled.nav`
     padding: 0.5em;
     border-radius: 10px;
     width: 100%;
-    max-width: 95vw;
     height: 100%;
     max-height: 10vh;
-    margin: 10px auto;
+    margin: 10px 10px;
     transition: all 1.3s ease-in;
+    position: fixed;
 `;
 
 export const Container = styled.div`
@@ -26,6 +26,21 @@ export const Container = styled.div`
     max-width: 1200px;
 `;
 
+export const ExtendedContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+
+    background-color: #3c369c;
+
+    @media (min-width: 700px) {
+        display: none;
+    }
+`;
+
 export const Img = styled.img`
     height: 70px;
     width: 70px;
@@ -35,7 +50,11 @@ export const Img = styled.img`
 export const Ul = styled.ul`
     display: flex;
     list-style: none;
-    align-items: flex-end;
+    align-items: center;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
 `;
 
 export const Li = styled.li`
@@ -57,5 +76,23 @@ export const Li = styled.li`
             border-radius: 5px;
             padding: 5px;
         }
+    }
+
+    @media (max-width: 700px) {
+    }
+`;
+
+export const DropDownButton = styled.button`
+    width: 70px;
+    height: 50px;
+    margin-right: 50px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+
+    @media (min-width: 700px) {
+        display: none;
     }
 `;
