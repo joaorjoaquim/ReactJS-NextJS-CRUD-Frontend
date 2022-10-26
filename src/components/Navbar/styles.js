@@ -10,9 +10,14 @@ export const MyNav = styled.nav`
     width: 100%;
     height: 100%;
     max-height: 10vh;
-    margin: 10px 10px;
+    max-width: 90vw;
+    margin: 5vw auto;
     transition: all 1.3s ease-in;
     position: fixed;
+
+    @media (min-width: 700px) {
+        margin: 3vw auto;
+    }
 `;
 
 export const Container = styled.div`
@@ -24,6 +29,11 @@ export const Container = styled.div`
     font-size: 20px;
     width: 100%;
     max-width: 1200px;
+`;
+
+export const Header = styled.div`
+    display: flex;
+    justify-content: center;
 `;
 
 export const ExtendedContainer = styled.div`
