@@ -1,50 +1,56 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import {
-    Container,
-    Img,
-    MyNav,
-    Ul,
-    Li,
-    DropDownButton,
-    Header,
+    NavbarContainer,
+    LeftContainer,
+    RightContainer,
+    NavbarExtendedContainer,
+    NavbarInnerContainer,
+    NavbarLinkContainer,
+    NavbarLink,
+    Logo,
+    OpenLinksButton,
+    NavbarLinkExtended,
 } from './styles';
-import logo from '../../img/logo192.png';
+import LogoImg from '../../img/logo192.png';
 
 function Navbar() {
     const [extendNavbar, setExtendNavbar] = useState(false);
 
     return (
-        <Header>
-            <MyNav>
-                <Container>
-                    <NavLink to="/">
-                        <Img src={logo} alt="Home" />
-                    </NavLink>
-                    <Ul extendNavBar={extendNavbar}>
-                        <Li>
-                            <NavLink to="/home">Home</NavLink>
-                        </Li>
-                        <Li>
-                            <NavLink to="/users">Usuários</NavLink>
-                        </Li>
-                        <Li>
-                            <NavLink to="/projects">Projetos</NavLink>
-                        </Li>
-                        <Li>
-                            <NavLink to="/tasks">Tarefas</NavLink>
-                        </Li>
-                    </Ul>
-                    <DropDownButton
-                        onClick={() => {
-                            setExtendNavbar(!extendNavbar);
-                        }}
-                    >
-                        {extendNavbar ? <>&#10005;</> : <>&#8801;</>}
-                    </DropDownButton>
-                </Container>
-            </MyNav>
-        </Header>
+        <NavbarContainer extendNavbar={extendNavbar}>
+            <NavbarInnerContainer>
+                <LeftContainer>
+                    <NavbarLinkContainer>
+                        <NavbarLink to="/home"> Home</NavbarLink>
+                        <NavbarLink to="/users">Usuários</NavbarLink>
+                        <NavbarLink to="/projects">Projetos</NavbarLink>
+                        <NavbarLink to="/tasks">Tarefas</NavbarLink>
+                        <OpenLinksButton
+                            onClick={() => {
+                                setExtendNavbar((curr) => !curr);
+                            }}
+                        >
+                            {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
+                        </OpenLinksButton>
+                    </NavbarLinkContainer>
+                </LeftContainer>
+                <RightContainer>
+                    <Logo src={LogoImg}></Logo>
+                </RightContainer>
+            </NavbarInnerContainer>
+            {extendNavbar && (
+                <NavbarExtendedContainer>
+                    <NavbarLinkExtended to="/"> Home</NavbarLinkExtended>
+                    <NavbarLinkExtended to="/users">
+                        Usuários
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended to="/projects">
+                        Projetos
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended to="/tasks">Tarefas</NavbarLinkExtended>
+                </NavbarExtendedContainer>
+            )}
+        </NavbarContainer>
     );
 }
 
