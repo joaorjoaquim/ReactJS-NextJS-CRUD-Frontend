@@ -10,9 +10,11 @@ export const UsersContainer = styled.div`
 
 export const AddButton = styled.button`
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
     align-self: flex-end;
-    margin: 20px;
+    margin-top: 20px;
+    margin-right: 65px;
+    margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     border: 30px;
     background-color: #7274cb;
@@ -28,11 +30,53 @@ export const AddButton = styled.button`
 `;
 
 export const ListContainer = styled.div`
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
     width: 90%;
     height: calc(100% - 80px);
     background-color: #fff;
     display: flex;
     border-radius: 8px;
     padding: 20px;
+    flex-direction: column;
+    overflow-x: auto;
+`;
+
+export const MyTable = styled.table`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+
+    thead {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    th {
+        padding: 5px 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    tbody {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px 10px;
+        width: 100%;
+    }
 `;
