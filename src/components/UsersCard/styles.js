@@ -29,6 +29,22 @@ export const AddButton = styled.button`
     }
 `;
 
+export const IconButton = styled.button`
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+
+    &:hover {
+        color: #5b61b9;
+    }
+`;
+
+export const IconDiv = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 export const ListContainer = styled.div`
     align-items: baseline;
     justify-content: space-between;

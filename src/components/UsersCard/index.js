@@ -1,5 +1,13 @@
 import React from 'react';
-import { AddButton, ListContainer, UsersContainer, MyTable } from './styles';
+import {
+    AddButton,
+    ListContainer,
+    UsersContainer,
+    MyTable,
+    IconButton,
+    IconDiv,
+} from './styles';
+import { MdDeleteForever, MdEdit } from 'react-icons/md';
 
 const UsersCard = () => {
     return (
@@ -23,7 +31,16 @@ const UsersCard = () => {
                                 <td>Pedro</td>
                                 <td>pedro@gmasa.comas</td>
                                 <td>12sasaS32FfFFFew33</td>
-                                <td>Editar & Excluir</td>
+                                <td>
+                                    <IconDiv>
+                                        <IconButton>
+                                            <MdEdit size={20} />
+                                        </IconButton>
+                                        <IconButton>
+                                            <MdDeleteForever size={20} />
+                                        </IconButton>
+                                    </IconDiv>
+                                </td>
                             </tr>
                             <tr>
                                 <td>14145</td>
