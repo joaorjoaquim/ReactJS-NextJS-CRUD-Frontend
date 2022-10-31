@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Button from '../../Components/Button';
 import Input from '../../Components/Input';
 import { Container, Form } from './styles';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/Auth';
 
 function Login() {
+    const { authenticated, login } = useContext(AuthContext);
     //const [loading, setLoading] = useState();
     const [form, setForm] = useState([]);
     const navigate = useNavigate();
@@ -16,6 +18,8 @@ function Login() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log('Submit ', { form });
+        login(form.email, form.password);
         try {
             navigate('../home', { replace: true });
         } catch (err) {
